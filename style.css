@@ -5,9 +5,9 @@
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Puts logo left, title center, menu right */
     align-items: center;
-    padding: 15px 30px;
+    padding: 20px 30px;
 }
 
 .header-left {
@@ -16,7 +16,7 @@ header {
 }
 
 .logo {
-    width: 80px;      /* adjust size */
+    width: 80px;   /* Adjust size */
     height: auto;
 }
 
@@ -39,8 +39,9 @@ header {
 .header-right ul li a {
     text-decoration: none;
     font-weight: 600;
-    color: black;   /* adjust color if needed */
+    color: black;   /* Change color if needed */
 }
+
 
 
 .header-center {
