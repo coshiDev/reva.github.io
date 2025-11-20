@@ -36,3 +36,13 @@ async function loadCryptoPrices() {
 
 loadCryptoPrices();
 setInterval(loadCryptoPrices, 20000);
+
+{
+  "bitcoin": {
+    "usd": 67187.3358936566,
+    "usd_market_cap": 1317802988326.25,
+    "usd_24h_vol": 31260929299.5248,
+    "usd_24h_change": 3.63727894677354,
+    "last_updated_at": 1711356300
+  }
+}
