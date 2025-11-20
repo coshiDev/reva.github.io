@@ -12,11 +12,20 @@ async function loadCryptoPrices() {
 
         const btc = parseFloat(data[0].price).toFixed(2);
         const eth = parseFloat(data[1].price).toFixed(2);
-        const usdt = "1.00"; // USDT stays $1
+        const usdt = "1.00";
 
-        const tickerText = `Bitcoin: $${btc}   |   Ethereum: $${eth}   |   USDT: $${usdt}`;
+        const tickerHTML = `
+            <img class="crypto-logo" src="https://cryptoicons.org/api/icon/btc/50" alt="BTC Logo">
+            Bitcoin: $${btc}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <img class="crypto-logo" src="https://cryptoicons.org/api/icon/eth/50" alt="ETH Logo">
+            Ethereum: $${eth}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <img class="crypto-logo" src="https://cryptoicons.org/api/icon/usdt/50" alt="USDT Logo">
+            USDT: $${usdt}
+        `;
 
-        document.getElementById("ticker-content").textContent = tickerText;
+        document.getElementById("ticker-content").innerHTML = tickerHTML;
 
     } catch (error) {
         document.getElementById("ticker-content").textContent =
@@ -25,6 +34,5 @@ async function loadCryptoPrices() {
     }
 }
 
-// Load prices immediately + refresh every 20 seconds
 loadCryptoPrices();
 setInterval(loadCryptoPrices, 20000);
